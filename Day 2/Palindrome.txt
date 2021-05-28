@@ -1,0 +1,45 @@
+[12:59] Kottilthodi Khalid, Nusaiba
+using System;
+
+public class Program
+
+{​​​​
+
+    public static void Main(string[] args)
+
+    {​​​​
+
+        string result="",str1;
+
+        Console.WriteLine("enter the string1");
+
+        str1=Console.ReadLine();
+
+        for(int i=str1.Length-1;i>=0;i--)
+
+        {​​​​
+
+            result=result+str1[i];
+
+        }​​​​
+
+        if (result==str1)
+
+        {​​​​
+
+            Console.WriteLine("palindrome");
+
+        }​​​​
+
+        else
+
+        {​​​​
+
+            Console.WriteLine("Not palindrome");
+
+        }​​​​
+
+    }​​​​
+
+}​​​​
+

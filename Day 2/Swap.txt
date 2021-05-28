@@ -1,0 +1,112 @@
+using System;
+public class Exercise5
+{
+       public static void Main(string[] args)
+         {
+            int number1, number2, temp;
+            Console.Write("\nInput the First Number : ");
+            number1 = int.Parse(Console.ReadLine());
+            Console.Write("\nInput the Second Number : ");
+            number2 = int.Parse(Console.ReadLine());
+            temp = number1;
+            number1 = number2;
+            number2 = temp;
+            Console.Write("\nAfter Swapping : ");
+            Console.Write("\nFirst Number : "+number1);
+            Console.Write("\nSecond Number : "+number2);
+            Console.Read();
+        }
+}
+
+
+
+// initialized value
+using System;
+namespace swap
+{
+	class ab
+	{
+		static void Main(String[] args)
+		{
+			int a=5,b=3,temp;
+
+			//swapping
+			temp=a;
+			a=b;
+			b=temp;
+			
+			Console.WriteLine("Values after swapping are:");
+			Console.WriteLine("a="+a);
+			Console.WriteLine("b="+b);
+		}
+	}
+}
+
+
+//Without using third variable..initialized value
+using System;
+namespace swap
+{
+	class ab
+	{
+		static void Main(String[] args)
+		{
+			int a=10,b=20;
+
+			//swapping
+			a=a+b;
+			b=a-b;
+			a=a-b;
+			
+			Console.WriteLine("Values after swapping are:");
+			Console.WriteLine("a="+a);
+			Console.WriteLine("b="+b);
+		}
+	}
+}
+
+
+//user define value
+using System;
+namespace SwapDemo
+{
+    class Program
+    {
+        static void Main(string[] args)
+        {
+            int a, b;
+            Console.Write("Enter Value of Number A:");
+            a = Convert.ToInt32(Console.ReadLine());
+            Console.Write("Enter value of Number B:");
+            b = Convert.ToInt32(Console.ReadLine());
+            a = a + b;
+            b = a - b;
+            a = a - b;
+            Console.WriteLine("After swapping A={0} B={1}", a, b);
+        }
+    }
+}
+
+//call by value
+namespace SwapDemo
+{
+    class Program
+    {
+        static void Main(string[] args)
+        {
+            int a=2, b=4;
+			swap(ref a,ref b);
+			Console.WriteLine("Values in main funtion after swap");
+			Console.WriteLine("a=" +y + "b=" +z);
+			Console.ReadLine();
+		}
+			public static void swap(int a,intb)
+			{
+			int c = a;
+			a=b;
+			b=c;
+			Console.WriteLine("Values in swap funtion after swap");
+				Console.WriteLine("a=" +y + "b=" +z);
+			}
+	}
+}

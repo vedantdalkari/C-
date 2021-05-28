@@ -1,0 +1,14 @@
+using System;
+public class Exercise5
+{
+       public static void Main(string[] args)
+         {
+           int a=5,b=1;
+		   Sum(a);
+		   Console.ReadLine();
+	   }
+	public static void Sum(int a,int b= 4)//if value is passed  it will not take default value
+	{
+		Console.WriteLine(a+b);
+	}
+}

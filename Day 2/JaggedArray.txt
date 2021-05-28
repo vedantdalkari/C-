@@ -1,0 +1,31 @@
+int [][] jaggedArray = new int[2][];
+		jaggedArray[0] = new int[4];
+		jaggedArray[1] = new int[2];
+		
+		jaggedArray[0] = new int[] {1,2,6,7};
+		jaggedArray[0] = new int[] {1,2};
+	}
+	
+	
+	using System;  
+public class array
+{  
+    public static void Main() 
+	{
+		string[][] Members = new string[2][]
+		{
+			new string[]{"Sam","Alex"},
+			new string[]{"Peter","Sonia","And"}
+		};
+		for(int i =0; i<Members.Length;i++)
+		{
+			for(int j =0; j<Members[i].Length;j++)
+			{
+				Console.Write(Members[i][j] + "\t");
+			}
+			Console.WriteLine();
+		}
+			Console.ReadLine();
+	}
+}
+		

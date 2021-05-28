@@ -1,0 +1,49 @@
+using System;  
+public class array
+{  
+    public static void Main() 
+	{
+	int[,] arr = new int[2,2];
+	
+		Console.Write("Enter values");
+		for(int row=0; row < 2; row++)
+		{
+				for(int col=0; col < 2; col++)
+				{
+					arr[row,col] = Convert.ToInt32(Console.ReadLine());
+				}
+		}
+		for(int row=0; row<2;row++)
+		{
+			for(int col=0; col < 2; col++)
+			{
+				Console.Write(arr[row,col]+"\t");
+			}
+			Console.WriteLine();
+		}
+		
+		//checking for identity
+		bool flag = true;
+		for(int row=0; row<2;row++)
+		{
+			for(int col=0; col < 2; col++)
+			{
+				if((row==col && arr[row,col]!=1)||(row!=col && arr[row,col]!=0))
+				{
+					flag = false;
+					break;
+				}
+			}
+		}
+		if(flag)
+		{
+			
+		
+			Console.WriteLine("Matrix is identity");
+		}
+		else {
+			Console.WriteLine("MAtrix is not identity");
+		}
+		Console.ReadLine();
+	}
+}
