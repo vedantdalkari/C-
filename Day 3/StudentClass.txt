@@ -1,0 +1,53 @@
+using System;
+					
+public class student
+{
+	public int rollNo;
+	public string studentName;
+}
+public class program{
+	public static void Main()
+	{
+		student s1=new student();
+		
+		Console.WriteLine("Enter student roll no:");
+		s1.rollNo=Convert.ToInt32(Console.ReadLine());
+		
+		Console.WriteLine("Enter student name:");
+		s1.studentName=Console.ReadLine();
+		
+		Console.WriteLine("Student details are:");
+		Console.WriteLine("Student Roll No: "+s1.rollNo);
+		Console.WriteLine("Student Name: "+s1.studentName);
+		
+	}
+}
+
+
+
+
+
+using System;
+public class Student
+{
+	public int StuID;
+	public string StuName;
+}
+public class Program
+{
+
+public static void Main(string[] args)
+{
+	Student stu1 = new Student();
+	Console.WriteLine("\nEnter Student ID:\n");
+	stu1.StuID =  Convert.ToInt32(Console.ReadLine()); 
+	
+	Console.WriteLine("\nEnter Student Name:\n");
+	stu1.StuName = Console.ReadLine();
+	
+		Console.WriteLine("\nDetails are:\n");
+		Console.WriteLine("\nStudent ID: " +stu1.StuID);
+		Console.WriteLine("\nStudent Name: " +stu1.StuName);
+		Console.ReadLine();
+	}
+}

@@ -1,0 +1,19 @@
+using System;
+
+
+  abstract class A 
+    {
+       
+    }
+	public class B:A
+	{
+	
+	}
+	public class C
+	{
+    public static void Main()
+        {
+          A a  = new A();
+        }
+    }
+

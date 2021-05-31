@@ -1,0 +1,34 @@
+using System;
+
+public abstract class wholeseller
+{
+  public abstract void Discount();
+}
+public class retailer : wholeseller
+{
+int price=0;
+ public void Price()
+  {
+    Console.WriteLine("enter price");
+	price=Convert.ToInt32(Console.ReadLine());
+	  
+  }
+  public override void Discount()
+  {
+  Console.WriteLine("enter discount");
+	int discount=Convert.ToInt32(Console.ReadLine());
+	int amt=price-discount;
+	Console.WriteLine("Discounted amount is "+amt);
+    
+  }
+}
+
+public class Program
+{
+public   static void Main(string[] args)
+  {
+    retailer r1 = new retailer(); 
+    r1.Price(); 
+    r1.Discount(); 	
+  }
+}

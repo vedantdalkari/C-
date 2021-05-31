@@ -1,0 +1,22 @@
+using System;
+					
+public class Employee
+{
+	static Employee()
+	{
+		Console.WriteLine("Hi I am Static Constructor!!");
+						
+	}
+}
+	
+	public class Class2
+	{
+		public static void Main()
+		{
+			Employee emp = new Employee();
+			Console.WriteLine();
+			Console.ReadLine();
+		}
+	}
+
+			
