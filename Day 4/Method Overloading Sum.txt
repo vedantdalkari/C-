@@ -1,0 +1,37 @@
+using System;
+					
+public class program
+{
+	int a=6,b=7;
+	
+	public void sum()
+	{
+		Console.WriteLine("Sum is:"+(a+b));
+	}
+	
+	public void sum(int a,int b)
+	{
+		Console.WriteLine("Sum is:"+(a+b));
+	}
+	
+	public int sum(int a,int b,int c)
+	{
+		return (a+b+c);
+	}
+	
+	public void sum(string a,string b)
+	{
+		Console.WriteLine("Sum is:" +(Convert.ToInt32(a) + Convert.ToInt32(b)));
+	}
+	
+	
+	public static void Main()
+	{
+		program p=new program();
+		p.sum();
+		p.sum(4,5);
+	    Console.WriteLine(p.sum(1,2,3));
+		p.sum(4,9);
+		
+	}
+}
