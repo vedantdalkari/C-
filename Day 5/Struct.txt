@@ -1,0 +1,29 @@
+using System;
+
+
+    public struct Student
+    {
+		public string name;
+		public int age;
+		public int weight;
+	}
+	public class program
+	{
+		
+		 public static void Main()
+        {
+			 Student p1;
+			 p1.name = "abs";
+			 p1.age = 20;
+			 p1.weight = 40;
+			 
+			 Console.WriteLine("Name: "+p1.name + "\nAge :" +p1.age +"\nWeight:" +p1.weight);
+		     Console.ReadLine();
+				
+		
+				    
+			}
+}
+
+
+

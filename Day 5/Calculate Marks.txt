@@ -1,0 +1,187 @@
+using System;
+
+namespace stud
+{
+public class student
+{
+int id,m1,m2,m3,tot,avg;
+string name,res,grade;
+public void get()
+{
+Console.WriteLine("Enter the student ID");
+id=int.Parse(Console.ReadLine());
+Console.WriteLine("Enter the student name");
+name=Console.ReadLine();
+Console.WriteLine("Enter the Mark1,Mark2,Mark3");
+m1=int.Parse(Console.ReadLine());
+m2=int.Parse(Console.ReadLine());
+m3=int.Parse(Console.ReadLine());
+}
+public void cal()
+{
+tot = m1 + m2 + m3;
+avg = tot / 3;
+if(m1>=45 && m2>=45 && m3>=45)
+{
+res="pass";
+if(avg>=90 && avg<=100)
+{
+grade="A";
+}
+else if(avg<=80 && avg>=70)
+{
+grade="B";
+}
+else
+{
+grade="C";
+}
+}
+else
+{
+res="Fail";
+grade="-";
+}
+}
+
+
+public void display()
+{
+
+Console.WriteLine("{0}\t{1}\t{2}\t{3}\t{4}\t{5}\t{6}\t{7}\t{8}", id, name, m1, m2, m3, tot, avg,res,grade);
+}
+}
+public class stude
+{
+
+public static void Main(string[] args)
+{
+int i, n;
+student[] s=new student[20];
+Console.WriteLine("Enter the no of students");
+n = int.Parse(Console.ReadLine());
+for (i = 1; i <= n; i++)
+{
+s[i] = new student();
+s[i].get();
+s[i].cal();
+
+}
+Console.WriteLine("ID\t\tNAME\t\tM1\t\tM2\t\tM3\t\tTOTAL\t\tAVG\t\tRESULT\t\tGRADE");
+for (i = 1; i <= n; i++)
+{
+s[i].display();
+}
+}
+}
+}
+
+
+
+
+
+
+
+
+using System;
+public class student
+{
+
+	public static void Main()
+	{
+		string[] sname = new string[10000];
+		int[] smarks = new int[10000];
+		int[] rollno = new int[10000];
+		int p;
+		char g;
+		for(int i=0;i<5;i++)
+		{
+			Console.WriteLine("enter name of student "+(i+1));
+			sname[i]=Console.ReadLine();
+			Console.WriteLine("enter total marks of student"+(i+1)+" out of 500");
+			smarks[i]=Convert.ToInt32(Console.ReadLine());
+			Console.WriteLine("enter roll no of student "+(i+1));
+			rollno[i]=Convert.ToInt32(Console.ReadLine());
+			
+		}
+			Console.Write("S.No\tRollNo\tName\t\tPercentage\t\tGrades");
+		Console.WriteLine();
+		for(int i=0;i<5;i++)
+		{
+			p=(smarks[i]*100)/500;
+			if(p>=90 &&p<=100)
+				g='A';
+			else if(p>=80&&p<=89)
+				g='B';
+			else if(p>=65&&p<=79)
+				g='C';
+			else if(p>=55&&p<=64)
+				g='D';
+			else if(p>=33&&p<=54)
+				g='E';
+			else
+				g='F';
+			Console.Write((i+1)+"\t\t\t\t"+rollno[i]+"\t\t\t\t"+sname[i]+"\t\t\t\t\t"+p+"\t\t\t"+g);
+		Console.WriteLine();	
+		}
+
+		
+	}	
+		}
+		
+		
+		
+		
+		using System;
+
+
+    public class Student
+    {
+		 public static void Main()
+        {
+			 //int per;
+		     int[] rollNo = { 1, 2,3,4,5 };
+		     string[] name = { "abc", "def", "xyz", "pqr", "std" };
+             int[] totalMarks = { 7, 183, 192, 165, 134 };
+			string g = string.Empty;
+			 
+			 Console.Write("RollNo\tName\t\tPercentage\t\tGrades");
+		    Console.WriteLine();
+			 
+		     for(int i=0; i < totalMarks.Length; i++)
+                {
+				     
+			       int per=totalMarks[i]*100/200;
+				  // Console.WriteLine("",per);
+				   if(per > 90)
+			 {
+				 g="A";
+			 }
+			 else if(per >80 && per <90)
+			 {
+				  g="B";
+			 }
+			 else if(per >65 && per < 80)
+			 {
+				  g="C";
+			 }
+			 else if(per >55 && per <65)
+			 {
+				 g="D";
+			 }
+			  else if(per >33 && per <55)
+			 {
+				 Console.WriteLine("D");
+			 }
+			 else
+			 {
+				 g="F";
+			 }
+					
+		Console.Write("\t"+rollNo[i]+"\t"+name[i]+"\t\t\t\t"+per+"\t\t\t" +g);
+		Console.WriteLine();	
+		
+				    
+		        }
+		}
+}

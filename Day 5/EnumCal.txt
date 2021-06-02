@@ -1,0 +1,35 @@
+using System;
+					
+public class Program
+{
+	public enum operation
+	{
+		addition,substraction,division,multiplication
+	}
+	public static void Main(string[]args)
+	{
+		int a;int b;
+		Console.WriteLine("enter the first number:");
+		a=Convert.ToInt32(Console.ReadLine());
+		Console.WriteLine("enter the first number:");
+		b=Convert.ToInt32(Console.ReadLine());
+		Console.WriteLine("enter your choice:\t0:addition\t1:substraction\t2:division\t3:multiplication");
+		int choice=Convert.ToInt32(Console.ReadLine());
+		switch(choice)
+		{
+			case (int)operation.addition:
+				Console.WriteLine("the additon of two numbers is :"+(a+b));
+				break;
+			case (int)operation.substraction:
+				Console.WriteLine("the sub of two numbers is :"+(a-b));
+				break;
+			case (int)operation.division:
+				Console.WriteLine("the div of two numbers is :"+(a/b));
+				break;
+			case (int)operation.multiplication:
+				Console.WriteLine("the product of two numbers is :"+(a*b));
+				break;
+				
+		}
+	}
+}
